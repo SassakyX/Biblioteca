@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F283E"
+    android:padding="16dp">
+
+
+
+    <Button
+        android:id="@+id/button_fiction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4D4B4B"
+        android:text="Ficción"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button_non_fiction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_fiction"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4D4B4B"
+        android:text="No Ficción"
+        android:textColor="#FFFFFF" />
+
+    <!-- Nuevo botón para Historia -->
+    <Button
+        android:id="@+id/button_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_non_fiction"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4D4B4B"
+        android:text="Historia"
+        android:textColor="#FFFFFF" />
+
+    <!-- Nuevo botón para Misterio -->
+    <Button
+        android:id="@+id/button_mystery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_history"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4D4B4B"
+        android:text="Misterio"
+        android:textColor="#FFFFFF" />
+
+
+    <!-- Nuevo botón para Ciencia -->
+    <Button
+        android:id="@+id/button_science"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_mystery"
+        android:backgroundTint="#4D4B4B"
+        android:text="Ciencia"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4D4B4B"
+        android:text="Cerrar sesión"
+        android:layout_below="@id/button_science"
+        android:translationY="400px"
+   />
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="394dp"
+        android:layout_below="@+id/button_science"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
