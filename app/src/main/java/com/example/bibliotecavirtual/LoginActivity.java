@@ -41,7 +41,10 @@ public class LoginActivity extends AppCompatActivity {
             skipButton = findViewById(R.id.skip_button);
 
             loginButton.setOnClickListener(v -> loginUser());
-            registerButton.setOnClickListener(v -> registerUser());
+            registerButton.setOnClickListener(v -> {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            });
             skipButton.setOnClickListener(v -> startMainActivityWithoutLogin());
 
         }
