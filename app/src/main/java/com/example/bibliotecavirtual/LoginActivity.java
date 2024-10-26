@@ -33,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
             setContentView(R.layout.activity_login);
             // Configuración normal del login
             mAuth = FirebaseAuth.getInstance();
-
             emailEditText = findViewById(R.id.email_edit_text);
             passwordEditText = findViewById(R.id.password_edit_text);
             loginButton = findViewById(R.id.login_button);
@@ -46,12 +45,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             });
             skipButton.setOnClickListener(v -> startMainActivityWithoutLogin());
-
         }
-
-
     }
-
     private void loginUser() {
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
@@ -82,26 +77,6 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-
-    private void registerUser() {
-        String email = emailEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
-
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(LoginActivity.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(LoginActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Error al registrarse", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
     }
     private void startMainActivityWithoutLogin() {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
