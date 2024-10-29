@@ -23,7 +23,7 @@ public class Book {
         this.category = category;
         this.averageRating = averageRating;
         this.reviews = reviews;
-        this.id = id; // Asegúrate de inicializar el ID
+        this.id = id;
     }
 
     public int getId() {

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,17 +17,21 @@ public class CategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
+        String userName = preferences.getString("userName", "Usuario");
+
         setContentView(R.layout.activity_category);
         mAuth = FirebaseAuth.getInstance();
         logoutButton = findViewById(R.id.logout_button);
 
         logoutButton.setOnClickListener(v -> logoutUser());
-
-        Button fictionButton = findViewById(R.id.button_fiction);
-        Button nonFictionButton = findViewById(R.id.button_non_fiction);
-        Button historyButton = findViewById(R.id.button_history);
-        Button mysteryButton = findViewById(R.id.button_mystery);
-        Button scienceButton = findViewById(R.id.button_science);
+        TextView Nombre = findViewById(R.id.NombreTexto);
+        Nombre.setText("Hola " + userName);
+        ImageView fictionButton = findViewById(R.id.button_fiction);
+        ImageView nonFictionButton = findViewById(R.id.button_non_fiction);
+        ImageView historyButton = findViewById(R.id.button_history);
+        ImageView mysteryButton = findViewById(R.id.button_mystery);
+        ImageView scienceButton = findViewById(R.id.button_science);
 
 
         fictionButton.setOnClickListener(v -> returnCategory("Ficción"));

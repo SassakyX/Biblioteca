@@ -1,6 +1,7 @@
 package com.example.bibliotecavirtual;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,6 +65,11 @@ public class RegisterActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                        SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("userName", nombre);
+                        Log.i("RegisterActivity", "registerUser: ");
+                        editor.apply();
                         finish();
                     } else {
                         Log.e("RegisterActivity", "Error al registrarse", task.getException());
