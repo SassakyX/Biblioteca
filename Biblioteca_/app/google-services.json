@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309379400817",
+    "project_id": "biblioteca-89355",
+    "storage_bucket": "biblioteca-89355.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309379400817:android:e11b42d9f44ad6704687d0",
+        "android_client_info": {
+          "package_name": "com.example.bibliotecavirtual"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMkbYhwo9ueHznc2cG-Aqzi2gF3JU2PTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
